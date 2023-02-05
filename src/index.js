@@ -1,13 +1,14 @@
 // 書き換え-40. 注意事項（Reactのバージョン）
-import { StrictMode } from "react";
+import React from "react";
 import ReactDom from "react-dom";
 
-import App from "./App";
+const App = () => {
+  return (
+    <>
+      <h1>こんにちは！</h1>
+      <p>お元気ですか？</p>
+    </>
+  );
+};
 
-const rootElement = document.getElementById("root");
-ReactDom.render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-  rootElement
-);
+ReactDom.render(<App />, document.getElementById("root"));
